@@ -48,12 +48,7 @@ var raceResults = [
   'Scott Humphries'
 ]
 
-// ACCESSORS
-
-console.log(person.name)
-console.log(person['shoeSize'])
-
-// (destructive) array manipulations
+// (destructive) ARRAY MANIPULATIONS
 raceResults.push('George W. Bush')
 raceResults.push('Bill Clinton')
 raceResults.pop()
@@ -61,11 +56,21 @@ raceResults.shift()
 raceResults.unshift('Barack Obama')
 console.log(raceResults);
 
-// array properties
-console.log(raceResults.length)
-// array accessor
-// console.log(raceResults.3) // wont work
-console.log(raceResults[3])
+// ACCESSORS
+console.log(person.name) // preferred
+console.log(person['shoeSize'])
+
+// with variables
+var prop = 'hairColor'
+console.log(person.hairColor) // wont work
+console.log(person[hairColor]) // required
+
+// arrays
+// console.log(raceResults.0) // Syntax Error
+console.log(raceResults[0]) // preferred
+console.log(raceResults['1'])
+
+// calculated accessors
 console.log(raceResults[raceResults.length - 1]) // get last item
 
 // LOOPS
